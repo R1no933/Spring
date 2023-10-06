@@ -4,8 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import spring.database.entity.Company;
-import spring.database.repository.CrudRepository;
+import spring.database.repository.CompanyRepository;
 import spring.dto.CompanyReadDto;
 import spring.listner.entity.AccesType;
 import spring.listner.entity.EntityEvent;
@@ -15,7 +14,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 @Service
 public class CompanyService {
-    private final CrudRepository<Integer, Company> companyRepository;
+    private final CompanyRepository companyRepository;
     private final UserService userService;
     private final ApplicationEventPublisher eventPublisher;
 
