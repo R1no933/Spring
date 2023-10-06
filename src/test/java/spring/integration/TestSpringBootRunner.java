@@ -1,4 +1,4 @@
-package spring.integrarion;
+package spring.integration;
 
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.boot.test.mock.mockito.SpyBean;

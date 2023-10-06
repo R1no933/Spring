@@ -26,7 +26,6 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class CompanyRepository implements CrudRepository<Integer, Company> {
 
-
     private final ConnectionPool pool1;
     private final List<ConnectionPool> pools;
     @Value("${db.pool.size}")
