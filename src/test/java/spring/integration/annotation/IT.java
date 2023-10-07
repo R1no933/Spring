@@ -1,8 +1,9 @@
-package spring.integrarion.annotation;
+package spring.integration.annotation;
 
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
-import spring.integrarion.TestSpringBootRunner;
+import org.springframework.transaction.annotation.Transactional;
+import spring.integration.TestSpringBootRunner;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -13,6 +14,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @ActiveProfiles("test")
 @SpringBootTest(classes = TestSpringBootRunner.class)
+@Transactional
 public @interface IT {
 
 }

@@ -1,13 +1,9 @@
-package spring.integrarion.service;
+package spring.integration.service;
 
 import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.boot.test.mock.mockito.MockBean;
-import org.springframework.boot.test.mock.mockito.SpyBean;
 import spring.database.pool.ConnectionPool;
-import spring.integrarion.annotation.IT;
+import spring.integration.annotation.IT;
 import spring.service.UserService;
 
 @IT

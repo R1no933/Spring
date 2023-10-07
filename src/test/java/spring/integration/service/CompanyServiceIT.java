@@ -1,31 +1,15 @@
-package spring.integrarion.service;
+package spring.integration.service;
 
 import lombok.RequiredArgsConstructor;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.ConfigDataApplicationContextInitializer;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.ActiveProfiles;
-import org.springframework.test.context.ContextConfiguration;
-import org.springframework.test.context.TestConstructor;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
-import spring.SpringBootRunner;
 import spring.config.DatabaseProperties;
-import spring.database.entity.Company;
 import spring.dto.CompanyReadDto;
-import spring.integrarion.annotation.IT;
-import spring.listner.entity.EntityEvent;
+import spring.integration.annotation.IT;
 import spring.service.CompanyService;
 
-import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.*;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
-import static org.mockito.Mockito.*;
 
 @IT
 @RequiredArgsConstructor

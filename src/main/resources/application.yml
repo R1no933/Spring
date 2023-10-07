@@ -18,9 +18,28 @@ db:
       timeout: 2
     - size: 3
       timeout: 3
-#spring.profiles.active=qa
+
 
 logging:
   level:
-    root: warn
+    root: info
     spring.database.pool.ConnectionPool: info
+
+
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/postgres
+    username: postgres
+    password: P@ssw0rd
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    properties:
+      hibernate:
+        show_sql: true
+        format_sql: true
+        naming:
+          implicit-strategy
+        hbm2ddl:
+          auto: validate
+
+
