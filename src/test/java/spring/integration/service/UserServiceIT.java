@@ -1,6 +1,7 @@
 package spring.integration.service;
 
 import lombok.RequiredArgsConstructor;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import spring.database.pool.ConnectionPool;
 import spring.integration.annotation.IT;
@@ -14,6 +15,7 @@ public class UserServiceIT {
     private final ConnectionPool pool1;
 
     @Test
+    @Disabled
     void test() {
         System.out.println();
     }

@@ -13,6 +13,7 @@ import spring.database.repository.UserRepository;
 import spring.dto.PersonalInfo;
 import spring.dto.PersonalInfo2;
 import spring.dto.UserFilter;
+import spring.integration.IntegrationTestBase;
 import spring.integration.annotation.IT;
 
 import java.time.LocalDate;
@@ -22,9 +23,8 @@ import java.util.Optional;
 import static org.assertj.core.api.AssertionsForInterfaceTypes.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
-@IT
 @RequiredArgsConstructor
-class UserRepositoryTest {
+class UserRepositoryTest extends IntegrationTestBase {
 
     private final UserRepository userRepository;
 
@@ -42,7 +42,6 @@ class UserRepositoryTest {
     }
 
     @Test
-    @Commit
     void checkAudit() {
         User ivan = userRepository.findById(1L).get();
         ivan.setBirthDate(ivan.getBirthDate().plusYears(1L));
