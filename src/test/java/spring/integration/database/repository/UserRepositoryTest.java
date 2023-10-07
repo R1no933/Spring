@@ -11,6 +11,7 @@ import spring.database.entity.enums.Role;
 import spring.database.repository.UserRepository;
 import spring.dto.PersonalInfo;
 import spring.dto.PersonalInfo2;
+import spring.dto.UserFilter;
 import spring.integration.annotation.IT;
 
 import java.time.LocalDate;
@@ -25,6 +26,17 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserRepositoryTest {
 
     private final UserRepository userRepository;
+
+    @Test
+    void checkCustomImpl() {
+        UserFilter filter = new UserFilter(
+                null,
+                "%ov%",
+                LocalDate.now()
+        );
+        List<User> users = userRepository.findAllByFilter(filter);
+        System.out.println();
+    }
 
     @Test
     void checkProjections() {
