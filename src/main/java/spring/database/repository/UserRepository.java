@@ -10,6 +10,8 @@ import org.springframework.data.jpa.repository.*;
 import org.springframework.stereotype.Repository;
 import spring.database.entity.User;
 import spring.database.entity.enums.Role;
+import spring.dto.PersonalInfo;
+import spring.dto.PersonalInfo2;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -44,4 +46,16 @@ public interface UserRepository extends JpaRepository<User, Long> {
     @Query(value = "select u from User u",
             countQuery = "select count(distinct u.firstname) from User u")
     Page<User> findAllBy(Pageable pageable);
+
+    /*List<PersonalInfo> findAllByCompanyId(Integer companyId);*/
+    /*<T> List<T> findAllByCompanyId(Integer companyId, Class<T> clazz);*/
+
+    @Query(
+            value = "SELECT firstname, " +
+                    "lastname, " +
+                    "birth_date birthDate " +
+                    "FROM users " +
+                    "WHERE company_id = :companyId",
+            nativeQuery = true)
+    List<PersonalInfo2> findAllByCompanyId(Integer companyId);
 }

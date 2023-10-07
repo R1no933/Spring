@@ -9,6 +9,8 @@ import org.springframework.data.domain.Sort;
 import spring.database.entity.User;
 import spring.database.entity.enums.Role;
 import spring.database.repository.UserRepository;
+import spring.dto.PersonalInfo;
+import spring.dto.PersonalInfo2;
 import spring.integration.annotation.IT;
 
 import java.time.LocalDate;
@@ -23,6 +25,12 @@ import static org.junit.jupiter.api.Assertions.*;
 class UserRepositoryTest {
 
     private final UserRepository userRepository;
+
+    @Test
+    void checkProjections() {
+        List<PersonalInfo2> users = userRepository.findAllByCompanyId(1);
+        assertThat(users).hasSize(2);
+    }
 
     @Test
     void checkPageable() {
