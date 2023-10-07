@@ -18,6 +18,7 @@ dependencies {
     implementation("org.postgresql:postgresql")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.springframework.data:spring-data-envers")
+    implementation("org.liquibase:liquibase-core")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     testImplementation("org.testcontainers:postgresql:1.19.1")

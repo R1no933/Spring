@@ -11,4 +11,4 @@
      properties:
        hibernate:
          hbm2ddl:
-           auto: update
+           auto: validate
