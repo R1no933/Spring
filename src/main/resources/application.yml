@@ -24,6 +24,7 @@ logging:
   level:
     root: info
     spring.database.pool.ConnectionPool: info
+    org.springframework.jdbc.core: debug
 
 
 spring:
