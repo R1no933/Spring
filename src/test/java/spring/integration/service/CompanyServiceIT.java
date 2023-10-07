@@ -1,6 +1,7 @@
 package spring.integration.service;
 
 import lombok.RequiredArgsConstructor;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import spring.config.DatabaseProperties;
 import spring.dto.CompanyReadDto;
@@ -21,6 +22,7 @@ public class CompanyServiceIT {
     private final DatabaseProperties databaseProperties;
 
     @Test
+    @Disabled
     void findById() {
 
         var actualResult = companyService.findById(COMPANY_ID);

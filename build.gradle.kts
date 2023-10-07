@@ -20,6 +20,8 @@ dependencies {
     implementation("org.springframework.data:spring-data-envers")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.testcontainers:postgresql:1.19.1")
+
 
 }
 
