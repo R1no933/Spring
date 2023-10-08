@@ -9,6 +9,7 @@ import org.springframework.web.server.ResponseStatusException;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 import spring.database.entity.enums.Role;
 import spring.dto.UserCreateEditDto;
+import spring.dto.UserFilter;
 import spring.dto.UserReadDto;
 import spring.service.CompanyService;
 import spring.service.UserService;
@@ -22,8 +23,8 @@ public class UserController {
     private final CompanyService companyService;
 
     @GetMapping
-    public String findAll(Model model) {
-        model.addAttribute("users", userService.findAll());
+    public String findAll(Model model, UserFilter filter) {
+        model.addAttribute("users", userService.findAll(filter));
         return "user/users";
     }
 
