@@ -5,6 +5,7 @@
     <title>Hello!</title>
 </head>
 <body>
-    <h1>Hello WORLD!!!</h1>
+    <h1>Hello WORLD!!!</h1><br><br>
+    <h2>Hello ${requestScope.user.username}</h2>
 </body>
 </html>
