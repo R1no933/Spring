@@ -15,11 +15,12 @@ repositories {
 
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter")
-    implementation("org.postgresql:postgresql")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.springframework.boot:spring-boot-starter-web")
+    implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
+    implementation("org.postgresql:postgresql")
     implementation("org.springframework.data:spring-data-envers")
     implementation("org.liquibase:liquibase-core")
-    implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.apache.tomcat.embed:tomcat-embed-jasper")
 
     testImplementation("org.springframework.boot:spring-boot-starter-test")
