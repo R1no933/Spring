@@ -42,5 +42,9 @@ spring:
           implicit-strategy
         hbm2ddl:
           auto: validate
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
 
 
