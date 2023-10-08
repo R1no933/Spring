@@ -13,14 +13,16 @@ import org.springframework.ui.Model;
 public class GreetingController {
 
     @GetMapping("/hello")
-    public String helloWorld(Model model, HttpServletRequest request) {
-        //model.addAttribute("user", new UserReadDto(1L, "Ivan"));
+    public String helloWorld(Model model,
+                             HttpServletRequest request,
+                             @ModelAttribute("userReadDto") UserReadDto userReadDto) {
 
+        model.addAttribute("user", userReadDto);
         return "greeting/hello";
     }
 
     @GetMapping("/bye")
-    public String byeWorld(@SessionAttribute("user") UserReadDto user) {
+    public String byeWorld(@SessionAttribute("user") UserReadDto user, Model model) {
         return "greeting/bye";
     }
 
