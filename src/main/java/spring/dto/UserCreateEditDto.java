@@ -7,11 +7,15 @@ import lombok.Value;
 import lombok.experimental.FieldNameConstants;
 import org.springframework.format.annotation.DateTimeFormat;
 import spring.database.entity.enums.Role;
+import spring.validation.UserInfo;
+import spring.validation.group.CreateAction;
+import spring.validation.group.UpdateAction;
 
 import java.time.LocalDate;
 
 @Value
 @FieldNameConstants
+@UserInfo(groups = CreateAction.class)
 public class UserCreateEditDto {
     @Email
     String username;
@@ -19,11 +23,9 @@ public class UserCreateEditDto {
     @DateTimeFormat(pattern = "yyyy-MM-dd")
     LocalDate birthDate;
 
-    @NotNull
     @Size(min = 3, max = 64)
     String firstname;
 
-    @NotNull
     String lastname;
     Role role;
     Integer companyId;
