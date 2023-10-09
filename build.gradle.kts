@@ -19,6 +19,8 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
     implementation("org.springframework.boot:spring-boot-starter-validation")
+    implementation("org.springdoc:springdoc-openapi-ui:1.7.0")
+
     implementation("org.postgresql:postgresql")
     implementation("org.springframework.data:spring-data-envers")
     implementation("org.liquibase:liquibase-core")
