@@ -38,6 +38,8 @@ public class User extends AuditingEntity<Long> {
 
     private String lastname;
 
+    private String image;
+
     @Enumerated(EnumType.STRING)
     private Role role;
 
@@ -49,4 +51,5 @@ public class User extends AuditingEntity<Long> {
     @Builder.Default
     @OneToMany(mappedBy = "user")
     private List<UserChat> userChats = new ArrayList<>();
+
 }

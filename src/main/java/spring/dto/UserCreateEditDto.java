@@ -6,6 +6,7 @@ import jakarta.validation.constraints.Size;
 import lombok.Value;
 import lombok.experimental.FieldNameConstants;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.web.multipart.MultipartFile;
 import spring.database.entity.enums.Role;
 import spring.validation.UserInfo;
 import spring.validation.group.CreateAction;
@@ -29,4 +30,5 @@ public class UserCreateEditDto {
     String lastname;
     Role role;
     Integer companyId;
+    MultipartFile image;
 }
