@@ -17,5 +17,8 @@
 <form action="/users/registration">
     <button type="submit">Registration</button>
 </form>
+<div style="color: red" th:if="${param.error}">
+    Bad credentials
+</div>
 </body>
 </html>
